@@ -1,5 +1,7 @@
 # Sophie Clock
 
+
+
 A beautiful and interactive clock application built with React, designed as a heartfelt gift for my girlfriend. This project features a 24-hour clock display, personalized labels for daily activities, and a lovely aesthetic.
 
 ## Features
@@ -47,4 +49,4 @@ Contributions are welcome! If you have suggestions for improvements or features,
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
-Inspired by love and the daily activities of life
+Inspired by by the the Korean drama "Love Next Door" - episode 3
