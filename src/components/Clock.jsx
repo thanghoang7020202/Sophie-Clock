@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css'; // FontAwesome icons
+import backgroundImage from '../assets/cutest-animals.avif';
 
 const Clock = () => {
     const canvasRef = useRef(null);
@@ -9,7 +10,7 @@ const Clock = () => {
 
     const preloadBackgroundImage = () => {
         const img = new Image();
-        img.src = 'src/assets/cutest-animals.avif'; // Image path
+        img.src = backgroundImage;
         img.onload = () => {
             backgroundRef.current = img;
         };
@@ -173,7 +174,7 @@ const Clock = () => {
     return (
         <div className="d-flex flex-column justify-content-center align-items-center bg-light">
             
-            <h1 className="mb-4 text-primary" style={{ fontFamily: 'Coiny, sans-serif', color: '#FF69B4', backgroundRef: 'src/assets/cutest-animals.avif', backgroundSize: 'cover' }}>
+            <h1 className="mb-4 text-primary" style={{ fontFamily: 'Coiny, sans-serif', color: '#FF69B4', backgroundRef: backgroundImage, backgroundSize: 'cover' }}>
                 <i className="fas fa-heart text-danger"></i> Lịch Của Sophie iu
             </h1>
 
