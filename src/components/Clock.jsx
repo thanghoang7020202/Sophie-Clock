@@ -134,7 +134,7 @@ const Clock = () => {
             ctx.beginPath();
             ctx.moveTo(centerX + trackerStartRadius * Math.cos(trackerAngle), centerY + trackerStartRadius * Math.sin(trackerAngle));
             ctx.lineTo(centerX + trackerEndRadius * Math.cos(trackerAngle), centerY + trackerEndRadius * Math.sin(trackerAngle));
-            ctx.strokeStyle = '#800080'; // Purple tracker line
+            ctx.strokeStyle = '#8000A0'; // Purple tracker line
             ctx.lineWidth = 5; // Tracker line width
             ctx.stroke();
         }
@@ -171,10 +171,12 @@ const Clock = () => {
     }, [size]);
 
     return (
-        <div className="d-flex flex-column justify-content-center align-items-center bg-light" style={{ backgroundRef: 'src/assets/cutest-animals.avif', backgroundSize: 'cover' }}>
-            <h1 className="mb-4 text-primary" style={{ fontFamily: 'Coiny, sans-serif', color: '#FF69B4' }}>
+        <div className="d-flex flex-column justify-content-center align-items-center bg-light">
+            
+            <h1 className="mb-4 text-primary" style={{ fontFamily: 'Coiny, sans-serif', color: '#FF69B4', backgroundRef: 'src/assets/cutest-animals.avif', backgroundSize: 'cover' }}>
                 <i className="fas fa-heart text-danger"></i> Lịch Của Sophie iu
             </h1>
+
             <div className="card shadow-lg p-3 mb-5 bg-white rounded">
                 <canvas ref={canvasRef} style={{ maxWidth: '100%', height: 'auto' }} />
             </div>
