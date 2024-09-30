@@ -121,6 +121,23 @@ const Clock = () => {
         drawHand(secondAngle, radius * 0.7, size / 300, '#FF60B4'); // Hot pink second hand
         drawHand(minuteAngle, radius * 0.5, size / 150, '#4A4A4A'); // Gray minute hand
         drawHand(hourAngle, radius * 0.3, size / 100, '#4A4A4A'); // Gray hour hand
+
+        const adjustedHour = (now.getHours() + 12) % 24; // Add 12 hours for display
+        const trackerStartRadius = radius * 0.7; // Start at 0.7 of the radius
+        const trackerEndRadius = radius * 1.0; // End at 1.0 of the radius
+
+        const trackerAngle = (adjustedHour / 24) * 2 * Math.PI - Math.PI / 2; // 24-hour format
+
+        // Draw the tracker line every 2 seconds
+        if (second % 2 === 0) {
+            // Draw the tracker line from 0.7 to 1.0 of the radius
+            ctx.beginPath();
+            ctx.moveTo(centerX + trackerStartRadius * Math.cos(trackerAngle), centerY + trackerStartRadius * Math.sin(trackerAngle));
+            ctx.lineTo(centerX + trackerEndRadius * Math.cos(trackerAngle), centerY + trackerEndRadius * Math.sin(trackerAngle));
+            ctx.strokeStyle = '#800080'; // Purple tracker line
+            ctx.lineWidth = 5; // Tracker line width
+            ctx.stroke();
+        }
     };
 
     const animateClock = (ctx, size) => {
