@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
+
+.coiny-regular {
+  font-family: 'Coiny', sans-serif;
+}
+
+/* Additional custom styles */
+.card {
+  background-color: #f8f9fa;
+  border: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.fa-globe-asia {
+  color: #007bff;
+}
+
+.text-primary {
+  color: #0056b3 !important;
+}
+
+.bg-light {
+  background-color: #e9ecef !important;
+}
